@@ -1,4 +1,4 @@
-Follow this guide: https://www.youtube.com/watch?v=mmnnV-hARj4
+Port 25 must be accessible, new accounts may be blocked. The support can give you access.
 
 Make sure to set the A-record for the subdomain to the server ip address
 
@@ -10,3 +10,6 @@ sudo nano /etc/postfix/main.cf
 
 sudo systemctl restart postfix
 
+
+Test:
+echo "This is the body" | mail -s "This is the subject" -a "FROM:info@yourdomain.com" info@youremail.com
